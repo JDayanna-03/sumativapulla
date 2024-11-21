@@ -1,0 +1,11 @@
+.primario {
+    background-color: blue;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    margin: 5px;
+    cursor: pointer;
+}

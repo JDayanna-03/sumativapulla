@@ -1,0 +1,29 @@
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  input {
+    flex: 1;
+    padding-right: 40px; /* Espacio para el botón */
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .toggle-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .error small {
+    color: red;
+    font-size: 0.8em;
+  }

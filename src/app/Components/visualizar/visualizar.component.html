@@ -1,0 +1,36 @@
+<section class="visualizar" #visualizarContainer>
+    <div class="contenedor-titulo">
+        <h2>SUMATIVA</h2>             
+        <app-button-dark-mode (darkModeToggle)="toggleDarkMode()"></app-button-dark-mode>
+    </div>
+    <div class="contenido">
+      <div class="columna izquierda">
+        <!-- Buttons -->
+        <div class="btn-container">
+            <div class="column">
+                <app-button-acept></app-button-acept>
+                <app-button-cancelar (cancelClicked)="clearInputs()"></app-button-cancelar>
+            </div>
+            <div class="colum">
+                <app-button-primario></app-button-primario>
+                <app-button-secundario></app-button-secundario>
+            </div>
+            
+        </div>
+
+        <!-- Inputs -->
+        <div>
+          <app-input-contrasena (passwordChange)="onPasswordChange($event)"></app-input-contrasena>
+          <app-input-emai (emailChange)="onEmailChange($event)"></app-input-emai>
+          <app-input-texto (textChange)="onTextChange($event)"></app-input-texto>
+        </div>
+      </div>
+  
+      <div class="columna derecha">
+        <!-- Display Variables -->
+        <p>Email: {{ enteredEmail }}</p>
+        <p>Password: {{ enteredPassword }}</p>
+        <p>Text: {{ enteredText }}</p>
+      </div>
+    </div>
+  </section>

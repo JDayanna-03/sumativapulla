@@ -1,0 +1,17 @@
+<label for="texto">Input de Texto:</label>
+<input 
+  type="text" 
+  id="texto" 
+  name="texto" 
+  [(ngModel)]="text" 
+  #textInput="ngModel"
+  (ngModelChange)="textChange.emit(text)" 
+  pattern="[a-zA-Z\s]*" 
+  required
+>
+
+<!-- Error message -->
+<div *ngIf="textInput.invalid && textInput.touched">
+  <small *ngIf="textInput.errors?.['required']">El campo es obligatorio.</small>
+  <small *ngIf="textInput.errors?.['pattern']">Solo se permiten letras.</small>
+</div>
